@@ -70,6 +70,8 @@ set shiftround
 set expandtab
 
 let g:netrw_home="$HOME/.vim/netrw/"
+inoremap <C-e> <C-o>g_
+inoremap <C-a> <C-o>^
 
 " gruvbox
 let g:gruvbox_contrast_dark="hard"
