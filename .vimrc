@@ -21,8 +21,10 @@ source $VIMRUNTIME/defaults.vim
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
+  set backupdir=$HOME/.vim/backup
   set backup		" keep a backup file (restore to previous version)
   if has('persistent_undo')
+    set undodir=$HOME/.vim/undo
     set undofile	" keep an undo file (undo changes after closing)
   endif
 endif
@@ -57,6 +59,10 @@ if &term =~ '256color'
     " work properly when Vim is used inside tmux and GNU screen.
     set t_ut= | set ttyscroll=1
 endif
+
+" gruvbox
+let g:gruvbox_contrast_dark="hard"
+let g:gruvbox_contrast_light="hard"
 
 " air-line
 let g:airline_powerline_fonts = 1
