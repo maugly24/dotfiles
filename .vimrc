@@ -1,13 +1,13 @@
 " An example for a vimrc file.
 "
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2019 Jan 26
+" Maintainer: Bram Moolenaar <Bram@vim.org>
+" Last change: 2019 Jan 26
 "
 " To use it, copy it to
 "     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
+"     for Amiga:  s:.vimrc
+"     for MS-DOS and Win32:  $VIM\_vimrc
+"     for OpenVMS:  sys$login:.vimrc
 
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
@@ -19,13 +19,13 @@ endif
 source $VIMRUNTIME/defaults.vim
 
 if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
+  set nobackup " do not keep a backup file, use versions instead
 else
   set backupdir=$HOME/.vim/backup
-  set backup		" keep a backup file (restore to previous version)
+  set backup " keep a backup file (restore to previous version)
   if has('persistent_undo')
     set undodir=$HOME/.vim/undo
-    set undofile	" keep an undo file (undo changes after closing)
+    set undofile " keep an undo file (undo changes after closing)
   endif
 endif
 
@@ -59,6 +59,17 @@ if &term =~ '256color'
     " work properly when Vim is used inside tmux and GNU screen.
     set t_ut= | set ttyscroll=1
 endif
+
+"standard vim stuff
+set list
+set number
+set incsearch
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
+
+let g:netrw_home="$HOME/.vim/netrw/"
 
 " gruvbox
 let g:gruvbox_contrast_dark="hard"
