@@ -51,6 +51,7 @@ augroup END
 if has('syntax') && has('eval')
   packadd! matchit
 endif
+filetype indent plugin on
 autocmd vimenter * colorscheme gruvbox
 syntax on
 set background=dark
@@ -66,8 +67,11 @@ set number
 set incsearch
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set shiftround
 set expandtab
+set autoindent
+set history=10000
 
 let g:netrw_home="$HOME/.vim/netrw/"
 inoremap <C-e> <C-o>g_
