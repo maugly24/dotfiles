@@ -1,7 +1,7 @@
-vim/undo/*
-!vim/undo/.gitkeep
-vim/backup/*
-!vim/backup/.gitkeep
-vim/netrw/*
-!vim/netrw/.gitkeep
+.vim/undo/*
+!.vim/undo/.gitkeep
+.vim/backup/*
+!.vim/backup/.gitkeep
+.vim/netrw/*
+!.vim/netrw/.gitkeep
 
