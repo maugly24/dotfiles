@@ -74,8 +74,22 @@ set autoindent
 set history=10000
 
 let g:netrw_home="$HOME/.vim/netrw/"
-inoremap <C-e> <C-o>g_
+unmap Q
+inoremap <C-e> <C-o>g_<C-o>a
 inoremap <C-a> <C-o>^
+nnoremap <Leader>qd mqWBxEx`qh
+inoremap <Leader>q} mq<ESC>WBcW{}<ESC>P`qli
+nnoremap <Leader>q} mqWBcW{}<ESC>P`ql
+inoremap <Leader>q) mq<ESC>WBcW()<ESC>P`qli
+nnoremap <Leader>q) mqWBcW()<ESC>P`ql
+inoremap <Leader>q{ mq<ESC>WBcW{}<ESC>P`qli
+nnoremap <Leader>q{ mqWBcW{}<ESC>P`ql
+inoremap <Leader>q( mq<ESC>WBcW()<ESC>P`qli
+nnoremap <Leader>q( mqWBcW()<ESC>P`ql
+inoremap <Leader>q" mq<ESC>WBcW""<ESC>P`qli
+nnoremap <Leader>q" mqWBcW""<ESC>P`ql
+inoremap <Leader>q' mq<ESC>WBcW''<ESC>P`qli
+nnoremap <Leader>q' mqWBcW''<ESC>P`ql
 
 " gruvbox
 let g:gruvbox_contrast_dark="hard"
