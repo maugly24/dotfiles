@@ -72,24 +72,31 @@ set shiftround
 set expandtab
 set autoindent
 set history=10000
+set numberwidth=5
 
 let g:netrw_home="$HOME/.vim/netrw/"
-unmap Q
+
 inoremap <C-e> <C-o>g_<C-o>a
 inoremap <C-a> <C-o>^
-nnoremap <Leader>qd mqWBxEx`qh
-inoremap <Leader>q} mq<ESC>WBcW{}<ESC>P`qli
-nnoremap <Leader>q} mqWBcW{}<ESC>P`ql
-inoremap <Leader>q) mq<ESC>WBcW()<ESC>P`qli
-nnoremap <Leader>q) mqWBcW()<ESC>P`ql
-inoremap <Leader>q{ mq<ESC>WBcW{}<ESC>P`qli
-nnoremap <Leader>q{ mqWBcW{}<ESC>P`ql
-inoremap <Leader>q( mq<ESC>WBcW()<ESC>P`qli
-nnoremap <Leader>q( mqWBcW()<ESC>P`ql
-inoremap <Leader>q" mq<ESC>WBcW""<ESC>P`qli
-nnoremap <Leader>q" mqWBcW""<ESC>P`ql
-inoremap <Leader>q' mq<ESC>WBcW''<ESC>P`qli
-nnoremap <Leader>q' mqWBcW''<ESC>P`ql
+nnoremap Qd mqWBxEx`qh
+vnoremap Q} <ESC>`>a}<ESC>`<i{<ESC>
+inoremap Q} mq<ESC>WBcW{}<ESC>P`qli
+nnoremap Q} mqWBcW{}<ESC>P`ql
+vnoremap Q) <ESC>`>a)<ESC>`<i(<ESC>
+inoremap Q) mq<ESC>WBcW()<ESC>P`qli
+nnoremap Q) mqWBcW()<ESC>P`ql
+vnoremap Q{ <ESC>`>a{<ESC>`<i}<ESC>
+inoremap Q{ mq<ESC>WBcW{}<ESC>P`qli
+nnoremap Q{ mqWBcW{}<ESC>P`ql
+vnoremap Q( <ESC>`>a(<ESC>`<i)<ESC>
+inoremap Q( mq<ESC>WBcW()<ESC>P`qli
+nnoremap Q( mqWBcW()<ESC>P`ql
+vnoremap Q" <ESC>`>a"<ESC>`<i"<ESC>
+inoremap Q" mq<ESC>WBcW""<ESC>P`qli
+nnoremap Q" mqWBcW""<ESC>P`ql
+vnoremap Q' <ESC>`>a'<ESC>`<i'<ESC>
+inoremap Q' mq<ESC>WBcW''<ESC>P`qli
+nnoremap Q' mqWBcW''<ESC>P`ql
 
 " gruvbox
 let g:gruvbox_contrast_dark="hard"
