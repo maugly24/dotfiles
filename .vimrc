@@ -52,13 +52,32 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 filetype indent plugin on
+augroup GruvBoxOverride
+  autocmd!
+  autocmd ColorScheme gruvbox highlight LineNr guifg='#8ec07c'
+augroup END
+" Force to use underline for spell check results and apply gruvbox theme
+" LL-Update: no need to shift things for color red.
+" Source: https://vi.stackexchange.com/a/21168/2398
+augroup SpellUnderline
+  autocmd!
+  autocmd ColorScheme * highlight SpellBad cterm=Underline ctermfg=None ctermbg=None
+  autocmd ColorScheme * highlight SpellCap cterm=Underline ctermfg=None ctermbg=None
+  autocmd ColorScheme * highlight SpellLocal cterm=Underline ctermfg=None ctermbg=None
+  autocmd ColorScheme * highlight SpellRare cterm=Underline ctermfg=None ctermbg=None
+augroup END
 autocmd vimenter * colorscheme gruvbox
+autocmd vimenter * set background=dark
+autocmd vimenter * highlight SpellBad cterm=UnderLine ctermfg=None ctermbg=None
+autocmd vimenter * highlight SpellCap cterm=Underline ctermfg=None ctermbg=None
+autocmd vimenter * highlight SpellLocal cterm=Underline ctermfg=None ctermbg=None
+autocmd vimenter * highlight SpellRare cterm=Underline ctermfg=None ctermbg=None
+autocmd vimenter * highlight LineNr guifg='#8ec07c'
 syntax on
-set background=dark
 if &term =~ '256color'
-    " Disable Background Color Erase (BCE) so that color schemes
-    " work properly when Vim is used inside tmux and GNU screen.
-    set t_ut= | set ttyscroll=1
+  " Disable Background Color Erase (BCE) so that color schemes
+  " work properly when Vim is used inside tmux and GNU screen.
+  set t_ut= | set ttyscroll=1
 endif
 
 "standard vim stuff
@@ -73,6 +92,9 @@ set expandtab
 set autoindent
 set history=10000
 set numberwidth=5
+set termguicolors
+set spell
+set ic
 
 let g:netrw_home="$HOME/.vim/netrw/"
 
@@ -97,10 +119,7 @@ nnoremap Q" mqWBcW""<ESC>P`ql
 vnoremap Q' <ESC>`>a'<ESC>`<i'<ESC>
 inoremap Q' mq<ESC>WBcW''<ESC>P`qli
 nnoremap Q' mqWBcW''<ESC>P`ql
-
-" gruvbox
-let g:gruvbox_contrast_dark="hard"
-let g:gruvbox_contrast_light="hard"
+cnoremap W!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " air-line
 let g:airline_powerline_fonts = 1
