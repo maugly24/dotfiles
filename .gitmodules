@@ -4,3 +4,6 @@
 [submodule "vim/pack/default/start/gruvbox"]
 	path = .vim/pack/default/start/gruvbox
 	url = https://github.com/morhetz/gruvbox
+[submodule ".vim/pack/default/start/vim-solarized8"]
+	path = .vim/pack/default/start/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8
