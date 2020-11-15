@@ -55,6 +55,8 @@ filetype indent plugin on
 augroup GruvBoxOverride
   autocmd!
   autocmd ColorScheme gruvbox highlight LineNr guifg='#8ec07c'
+  autocmd ColorScheme gruvbox let g:gruvbox_contrast_dark="hard"
+  autocmd User AirlineAfterTheme if g:colors_name == "gruvbox" | let g:airline_theme="dark" | endif
 augroup END
 " Force to use underline for spell check results and apply gruvbox theme
 " LL-Update: no need to shift things for color red.
@@ -66,6 +68,7 @@ augroup SpellUnderline
   autocmd ColorScheme * highlight SpellLocal cterm=Underline ctermfg=None ctermbg=None
   autocmd ColorScheme * highlight SpellRare cterm=Underline ctermfg=None ctermbg=None
 augroup END
+autocmd vimenter * let g:gruvbox_contrast_dark="hard"
 autocmd vimenter * colorscheme gruvbox
 autocmd vimenter * set background=dark
 autocmd vimenter * highlight SpellBad cterm=UnderLine ctermfg=None ctermbg=None
