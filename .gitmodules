@@ -7,3 +7,6 @@
 [submodule ".vim/pack/default/start/vim-solarized8"]
 	path = .vim/pack/default/start/vim-solarized8
 	url = https://github.com/lifepillar/vim-solarized8
+[submodule ".vim/pack/default/.vim/pack/default/start/vim-airline-themes"]
+	path = .vim/pack/default/.vim/pack/default/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
