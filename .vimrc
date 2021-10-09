@@ -69,8 +69,9 @@ augroup SpellUnderline
   autocmd ColorScheme * highlight SpellRare cterm=Underline ctermfg=None ctermbg=None
 augroup END
 autocmd vimenter * let g:gruvbox_contrast_dark="hard"
-autocmd vimenter * colorscheme gruvbox
-autocmd vimenter * set background=dark
+autocmd vimenter * colorscheme solarized8
+autocmd vimenter * let g:airline_theme="solarized"
+autocmd vimenter * set background=light
 autocmd vimenter * highlight SpellBad cterm=UnderLine ctermfg=None ctermbg=None
 autocmd vimenter * highlight SpellCap cterm=Underline ctermfg=None ctermbg=None
 autocmd vimenter * highlight SpellLocal cterm=Underline ctermfg=None ctermbg=None
