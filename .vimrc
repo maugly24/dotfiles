@@ -69,7 +69,12 @@ augroup SpellUnderline
   autocmd ColorScheme * highlight SpellRare cterm=Underline ctermfg=None ctermbg=None
 augroup END
 autocmd vimenter * let g:gruvbox_contrast_dark="hard"
-autocmd vimenter * colorscheme solarized8
+autocmd vimenter * colorscheme solarized
+if $COLORTERM == "truecolor"
+  autocmd vimenter * let solarized_termcolors=16
+else
+  autocmd vimenter * let solarized_termcolors=256
+endif
 autocmd vimenter * let g:airline_theme="solarized"
 autocmd vimenter * set background=light
 autocmd vimenter * highlight SpellBad cterm=UnderLine ctermfg=None ctermbg=None
@@ -96,7 +101,6 @@ set expandtab
 set autoindent
 set history=10000
 set numberwidth=5
-set termguicolors
 set spell
 set ic
 
