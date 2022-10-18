@@ -134,6 +134,7 @@ function gcd () {
 eval `ssh-agent -s`
 
 export DOTNET_WORKER_DIR='~/bin/Microsoft.Spark.Worker'
+source .promptline.sh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/maugli/.sdkman"

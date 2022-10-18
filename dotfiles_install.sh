@@ -10,3 +10,4 @@ function replace {
 replace .vim
 replace .vimrc
 replace .bashrc
+replace .promptline.sh
