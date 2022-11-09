@@ -68,13 +68,15 @@ augroup SpellUnderline
   autocmd ColorScheme * highlight SpellLocal cterm=Underline ctermfg=None ctermbg=None
   autocmd ColorScheme * highlight SpellRare cterm=Underline ctermfg=None ctermbg=None
 augroup END
+set t_Co=16
+set termguicolors
 autocmd vimenter * let g:gruvbox_contrast_dark="hard"
-autocmd vimenter * colorscheme solarized
-if $COLORTERM == "truecolor"
+autocmd vimenter * colorscheme solarized8
+"if $COLORTERM == "truecolor"
   autocmd vimenter * let solarized_termcolors=16
-else
-  autocmd vimenter * let solarized_termcolors=256
-endif
+"else
+"  autocmd vimenter * let solarized_termcolors=256
+"endif
 autocmd vimenter * let g:airline_theme="solarized"
 autocmd vimenter * set background=light
 autocmd vimenter * highlight SpellBad cterm=UnderLine ctermfg=None ctermbg=None
