@@ -11,3 +11,5 @@ replace .vim
 replace .vimrc
 replace .bashrc
 replace .promptline.sh
+replace .zshrc
+
