@@ -77,8 +77,8 @@ autocmd vimenter * colorscheme solarized8
 "else
 "  autocmd vimenter * let solarized_termcolors=256
 "endif
-autocmd vimenter * let g:airline_theme="solarized"
 autocmd vimenter * set background=light
+autocmd vimenter * AirlineTheme solarized
 autocmd vimenter * highlight SpellBad cterm=UnderLine ctermfg=None ctermbg=None
 autocmd vimenter * highlight SpellCap cterm=Underline ctermfg=None ctermbg=None
 autocmd vimenter * highlight SpellLocal cterm=Underline ctermfg=None ctermbg=None
