@@ -69,7 +69,6 @@ augroup SpellUnderline
   autocmd ColorScheme * highlight SpellRare cterm=Underline ctermfg=None ctermbg=None
 augroup END
 set t_Co=16
-set termguicolors
 autocmd vimenter * let g:gruvbox_contrast_dark="hard"
 autocmd vimenter * colorscheme solarized8
 "if $COLORTERM == "truecolor"

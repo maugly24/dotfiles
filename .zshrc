@@ -89,6 +89,13 @@ plugins=(git history history-substring-search brew terraform zsh-completions zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+function aws_login_populate_all() {
+	aws-sso-util configure populate --sep _ --components account_id,role_name --region eu-west-1 --no-credential-process
+}
+
+function aws_login_all() {
+	aws-sso-util login --all
+}
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
