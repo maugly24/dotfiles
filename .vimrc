@@ -85,6 +85,10 @@ autocmd vimenter * highlight SpellCap cterm=Underline ctermfg=None ctermbg=None
 autocmd vimenter * highlight SpellLocal cterm=Underline ctermfg=None ctermbg=None
 autocmd vimenter * highlight SpellRare cterm=Underline ctermfg=None ctermbg=None
 autocmd vimenter * highlight LineNr guifg='#8ec07c'
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line ("'\"") <= line("$") |
+\   exe "normal! g'\"" |
+\ endif
 syntax on
 if &term =~ '256color'
   " Disable Background Color Erase (BCE) so that color schemes
